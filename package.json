@@ -1,0 +1,42 @@
+{
+  "name": "table-utils-extension",
+  "version": "1.0.0",
+  "description": "表格工具集 Chrome 插件 - 检查行数、添加行、提取数据、填充数据",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 plasmo dev",
+    "build": "NODE_TLS_REJECT_UNAUTHORIZED=0 plasmo build",
+    "package": "NODE_TLS_REJECT_UNAUTHORIZED=0 plasmo package"
+  },
+  "keywords": [
+    "chrome-extension",
+    "table",
+    "utils"
+  ],
+  "author": "",
+  "license": "MIT",
+  "manifest": {
+    "commands": {
+      "toggle-sidepanel": {
+        "suggested_key": {
+          "default": "Ctrl+U",
+          "mac": "Command+U"
+        },
+        "description": "打开/关闭表格工具侧边栏"
+      }
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.251",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "plasmo": "^0.88.0",
+    "typescript": "^5.3.3"
+  }
+}

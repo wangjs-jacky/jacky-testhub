@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "表格内容提取工具",
+  "version": "1.0.0",
+  "description": "快速提取测试用例表格中的步骤描述和预期结果数据，支持JSON/CSV格式导出",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_title": "表格提取工具"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+
